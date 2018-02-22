@@ -1,0 +1,153 @@
+div{
+    margin: 0;
+    padding: 0;
+}
+.bili-wrapper{
+    margin: 0 auto;
+    width: 1160px;
+}
+.zone-wrap-module {
+    padding-bottom: 30px;
+}
+
+.gg-floor-module {
+    margin-bottom: 20px;
+    position: relative;
+    width: 1160px;
+    overflow: hidden;
+    border-radius: 5px;
+    max-height: 96px;
+}
+
+.gg-floor-module .gg-pic{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.gg-floor-module img{
+    border-radius: 5px;
+}
+img{
+    border: none;
+    vertical-align: middle;
+}
+
+.bangumi-module .up {
+    padding-bottom: 15px;
+}
+
+.bili-wrapper .l-con {
+    float: left;
+    width: 900px;
+}
+
+.bangumi-timing-module .headline{
+    position: relative;
+}
+.bangumi-timing-module .headline .icon_t.icon-bangumi{
+    background-position: -141px -140px;
+}
+
+.bangumi-timing-module .headline .icon_t{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+    float: left;
+    margin-top: -10px;
+}
+
+.bili-icon,.icon{
+    display: inline-block;
+    background-image: url("//static.hdslb.com/images/base/icons.png");
+}
+
+.bangumi-timing-module .headline .name{
+    font-size: 24px!important;
+    line-height: 24px;
+    font-weight: 400;
+    margin-right: 20px;
+    float: left;
+    color: #222;
+}
+a{
+    transition: color .2s;
+}
+.bangumi-timing-module .timing-box{
+    position: relative;
+    margin: 26px 20px 40px 0;
+    height: 398px;
+    overflow-y: auto;
+}
+.bangumi-timing-module .card-timing:first-child{
+    padding-top: 0;
+}
+.bangumi-timing-module .card-timing{
+    float: left;
+    width: 180px;
+    padding:36px 34px 0 0;
+}
+.card-timing-module .pic{
+    width: 72px;
+    height: 72px;
+    margin-right: 12px;
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.lazy-img{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.card-timing-module .r-text{
+    float: left;
+    width: 96px;
+    height: 72px;
+    position: relative;
+}
+.card-timing-module .r-text .t{
+    display: block;
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    margin-top: -3px;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #222;
+}
+.card-timing-module .r-text .update{
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    margin-top: 2px;
+    color: #aaa;
+    left: 0;
+    white-space: nowrap;
+    line-height: 18px;
+}
+.card-timing-module .r-text .update.on a{
+    background-color: #ff8eb3;
+}
+.card-timing-module .r-text .update a{
+    color: #fff;
+    border-radius: 9px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding: 0 4px;
+    height: 18px;
+    line-height: 18px;
+    min-width: 28px;
+    max-width: 82px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-left: 5px;
+}
+.clearfix{
+    zoom: 1;
+}

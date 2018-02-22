@@ -6,8 +6,9 @@ html
     link(rel="stylesheet" href="/stylesheets/bootstrap.min.css")
     link(rel="stylesheet" href="/stylesheets/bootstrap-grid.min.css")
     script(src="/javascripts/jquery.min.js")
-    script(src="/javascripts/popper.min.js")
     script(src="/javascripts/bootstrap.min.js")
+    script(src="/javascripts/popper.min.js")
+    link(rel="stylesheet" href="/stylesheets/index_m.css")
   body
     nav.navbar.navbar-expand-md.bg-dark.navbar-dark
         a.navbar-brand(href="#")="NavBar"
@@ -22,6 +23,59 @@ html
                li.nav-item
                  a.nav-link(href="#")="综艺"
     hr
+    div.bili-wrapper
+        div.zone-wrap-module.clearfix
+            div.bangumi-module
+                div.gg-floor-module
+                    div(style="overflow:hidden;margin:0px auto 20px;")
+                        a(target=_blank href="//cm.bilibili.com/cm/api/fees/pc/sync/v2?msg=a%7C43%2Cb%7Cbilibili%2Cc%7C1%2Cd%7C1%2Ce%7CCJNIEAAY1CwgACgAMAI4K0IeMTUxOTMwMTcxMDQwN3ExNzJhMThhNjFhMjNxMzQ5SMekweubLFIG55uQ5Z%2BOWgbmsZ%2Foi49iBuS4reWbvWgAcAB4gICAgCCAAQCIAZQLkgENMTE0LjIzNi41LjE1M5oBC2FsbDpkZWZhdWx0oAEAqAEAsgEgid4z87uVs4az2k3y24%2BFrNMNtqLEA2CHYQejYPaUQM66AUVodHRwczovL210ay5ibmV0LjE2My5jb20vYz9wPWNvNTI5JnM9ZTVmOGZlYWU2NWRhYjcxNzJiNzY4ZTU5ZTUxNzg0MmHCAQDKAQDSAQDYAQLgAQDoAQA%3D%2Cf%7Cclick_sync_3%2Cg%7C1%2Ch%7C1%2Ci%7C%2Cj%7C%2Ck%7C1519301710941%2Cl%7C42%2Cm%7C1519301710476%2Cn%7C1%2Co%7C&ts=1519301710942&spm_id_from=333.334.bili_bangumi.1")
+                          div.lazy-img
+                              img(alt="ad" src="https://i0.hdslb.com/bfs/sycp/tmaterial/201802/5d36af2a554b12c8ff2e0bbdc8a07263.jpg")
+                          img.gg-pic(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAUCAYAAADskT9PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo3NTIzNzRmYy05ZTZlLTY0NDQtYjA3Yy1iZDVmNDk5Yjk4MzEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTc1QjVBQTU3N0ZDMTFFNjk0MTdENzQ1NUIwOEQ1NTYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTc1QjVBQTQ3N0ZDMTFFNjk0MTdENzQ1NUIwOEQ1NTYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjgxMWYxZDcxLWZkNGItNGU4ZS1hNjkzLWVjNmJiMzllZWI0ZiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NTIzNzRmYy05ZTZlLTY0NDQtYjA3Yy1iZDVmNDk5Yjk4MzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7vj1r7AAAB0ElEQVR42sRWPUsDQRC9uwTZcAopzyqBNEEbf4DWkkawC+kCIWApHCepxCqYyk4MAbuYzlJS6w+xTBnwYpZAXGd0NkzWO/PBhQw8dnd2b97s7OzOWdaWxaY2BcgA9gA7TJ+0KMAE8AEYA6Zpmsi02+2TSqVy6rpuZpM7Ho1G426326/X668wDLV+PwzDuyAIzqBfAOQjUAQcUZtfEwXkQC7k5I7llFIPRO7EOJ+lNWhIGHM4zlLL+6ag7QLZyVmMTJ/5FPBlGPaI1LNt+wk+brAoeJoQ9LekL7I+X2OR7SnnTC84MjR88yeTlLqYZbFtX9OO5/TGmitoZBTBIgcEGXiEZhAxj0YFkF3Cmmcao9MlGL9Af6h11MpVHdCC5O8xcx7t+NyIUmnuvsdEIZ3AzRqC8aZx1maUBusewTLyE1rYcTX2tfvNk5UdEGxHcs1c8cgxEfeh849Bj5KrScm0EYmLAGZ2g8gHS0RAJ141KQcky1q5ZB7gEdwb0crSeyAXOaBYVXRWIOY3IcphYVw/hzhmnNqBCVYpKBSHrVbLYs9l0pLyff8AuCSV5VkN2O10OsflcrkE5VhsuBx/9nq9fq1We8NyvPUfkm3/kVnfAgwApX65i8Rt39oAAAAASUVORK5CYII=")
+                div.up.clearfix
+                    div.bangumi-timing-module.l-con
+                        div.headline.clearfix
+                            i.icon.icon_t.icon-bangumi
+                            a.name(href="#")="番剧"
+                        div.timing-box.clearfix
+                            div.card-timing-module.clearfix.card-timing
+                                a.pic(href="#" target="_blank" title="爱吃拉面的小泉同学")
+                                   div.lazy-img
+                                       img(alt="爱吃拉面的小泉同学" src="http://i0.hdslb.com/bfs/bangumi/a160be35d676316efeb53157001b8df257a48a77.jpg@72w_72h.webp")
+                                div.r-text
+                                    a.t(href="#" target="_blank" title="爱吃拉面的小泉同学")="爱吃拉面的小泉同学"
+                                    p.update.on
+                                      span="更新至"
+                                          a(href="#" target="_blank")="8话"
+                            div.card-timing-module.clearfix.card-timing
+                                a.pic(href="#" target="_blank" title="爱吃拉面的小泉同学")
+                                    div.lazy-img
+                                        img(alt="爱吃拉面的小泉同学" src="http://i0.hdslb.com/bfs/bangumi/a160be35d676316efeb53157001b8df257a48a77.jpg@72w_72h.webp")
+                                div.r-text
+                                    a.t(href="#" target="_blank" title="爱吃拉面的小泉同学")="爱吃拉面的小泉同学"
+                                    p.update.on
+                                        span="更新至"
+                                        a(href="#" target="_blank")="8话"
+                            div.card-timing-module.clearfix.card-timing
+                                a.pic(href="#" target="_blank" title="爱吃拉面的小泉同学")
+                                    div.lazy-img
+                                        img(alt="爱吃拉面的小泉同学" src="http://i0.hdslb.com/bfs/bangumi/a160be35d676316efeb53157001b8df257a48a77.jpg@72w_72h.webp")
+                                div.r-text
+                                    a.t(href="#" target="_blank" title="爱吃拉面的小泉同学")="爱吃拉面的小泉同学"
+                                    p.update.on
+                                        span="更新至"
+                                        a(href="#" target="_blank")="8话"
+                            div.card-timing-module.clearfix.card-timing
+                                a.pic(href="#" target="_blank" title="爱吃拉面的小泉同学")
+                                    div.lazy-img
+                                        img(alt="爱吃拉面的小泉同学" src="http://i0.hdslb.com/bfs/bangumi/a160be35d676316efeb53157001b8df257a48a77.jpg@72w_72h.webp")
+                                div.r-text
+                                    a.t(href="#" target="_blank" title="爱吃拉面的小泉同学")="爱吃拉面的小泉同学"
+                                    p.update.on
+                                        span="更新至"
+                                        a(href="#" target="_blank")="8话"
+
+  //-
     div.container
       p #{index_data.info}
       p #{index_data.index[0].title}
