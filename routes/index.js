@@ -11,8 +11,20 @@ router.get('/', function (req, res) {
     //         res.render("index",{index_data:data});
     //     }
     // });
-    res.render("index");
 
+    var url = "https://api.bgm.tv/calendar";
+    request(url,function (error,response,body) {
+       if (!error&&response.statusCode==200){
+           var data = JSON.parse(body);
+           res.render("index",{mydata:data});
+       }
+    });
+   // res.render("index");
+
+});
+
+router.get("/test",function (req,res) {
+    res.render("test");
 });
 
 module.exports = router;

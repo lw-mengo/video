@@ -1,7 +1,10 @@
 div{
     margin: 0;
     padding: 0;
+
 }
+
+
 .bili-wrapper{
     margin: 0 auto;
     width: 1160px;
@@ -79,12 +82,12 @@ a{
     height: 398px;
     overflow-y: auto;
 }
-.bangumi-timing-module .card-timing:first-child{
+.bangumi-timing-module .card-timing:first-child,.bangumi-timing-module .card-timing:nth-child(2),.bangumi-timing-module .card-timing:nth-child(3),.bangumi-timing-module .card-timing:nth-child(4){
     padding-top: 0;
 }
 .bangumi-timing-module .card-timing{
     float: left;
-    width: 180px;
+    width: 214px;
     padding:36px 34px 0 0;
 }
 .card-timing-module .pic{

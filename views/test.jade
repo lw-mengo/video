@@ -1,0 +1,58 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        link(rel="stylesheet" href="/stylesheets/video-js.min.css")
+        link(rel="stylesheet" href="/stylesheets/bootstrap.min.css")
+        script(src="/javascripts/jquery.min.js")
+        script(src="/javascripts/bootstrap.min.js")
+        script(src="/javascripts/popper.min.js")
+        script(src="/javascripts/video.min.js")
+        script(src="/javascripts/videojs-contrib-hls.min.js")
+        style.
+            .btn{margin-right:30px}
+    body
+        hr
+        div.container
+            button#btn.btn.btn-primary.disabled(type="button") 第二集
+            button#btm.btn.btn-primary.active(type="button") 第一集
+        hr
+        div.container
+            video#myvideo.video-js.vjs-default-skin(width=1280 height=720 controls)
+        script.
+
+            $(document).ready(function () {
+                    var player = videojs('myvideo');
+                $('#btm').click(function () {
+                    $('#btn').removeClass('disabled');
+                    $('#btn').attr("disabled",false);
+                    $(this).removeClass('active');
+                    $(this).addClass('disabled');
+                    $(this).attr("disabled",true);
+                  //  $("#myurl").attr("src", "http://zy.zxziyuan-yun.com/20180113/kKpM4Uid/index.m3u8");
+
+                    player.src({src:"http://zy.zxziyuan-yun.com/20180113/kKpM4Uid/index.m3u8",
+                           type:"application/x-mpegURL"
+                    });
+                    player.play();
+                });
+                $('#btn').click(function () {
+                    $('#btm').removeClass('disabled');
+                    $('#btm').attr("disabled", false);
+                    $(this).removeClass('active');
+                    $(this).addClass('disabled');
+                    $(this).attr("disabled", true);
+                   // $("#myurl").attr("src", "http://zy.zxziyuan-yun.com/20180113/E5kTAgBA/index.m3u8");
+                    var player = videojs('myvideo');
+                    player.src({
+                        src: "http://zy.zxziyuan-yun.com/20180113/E5kTAgBA/index.m3u8",
+                        type: "application/x-mpegURL"
+                    });
+                    player.play();
+                });
+
+
+            });
+
+//-
+    http://kbzy.zxziyuan-yun.com/20180126/F1Ppk6V4/index.m3u8
