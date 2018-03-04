@@ -27,4 +27,17 @@ router.get("/test",function (req,res) {
     res.render("test");
 });
 
+router.get("/info",function (req,res) {
+    var subject =req.query.subject;
+    console.log(subject);
+    var base_url ="https://api.bgm.tv/subject/"+subject;
+    request(base_url,function (error,response,body) {
+        if (!error&&response.statusCode==200){
+            var data = JSON.parse(body);
+            res.render("bangumi_info",{bangumi_info:data});
+        }
+    });
+ //   res.render("bangumi_info");
+});
+
 module.exports = router;

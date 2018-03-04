@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        link(rel="stylesheet" href="/stylesheets/bootstrap.min.css")
+        script(src="/javascripts/jquery.min.js")
+        script(src="/javascripts/bootstrap.min.js")
+        script(src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js")
+        body
+            nav.navbar.navbar-expand-md.navbar-dark.bg-primary
+                a.navbar-brand(href="#")="NavBar"
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbar")
+                    span.navbar-toggler-icon
+                div.collapse.navbar-collapse#navbar
+                    ul.navbar-nav
+                        li.nav-item
+                            a.nav-link(href="#")="动画"
+                        li.nav-item
+                            a.nav-link(href="#")="电视剧"
+                        li.nav-item
+                            a.nav-link(href="#")="综艺"
+            div.container
+                div.card
+                    img.card-img(src="#{bangumi_info.images.common}" alt="#{bangumi_info.name_cn}")
+                    div.card-body.float-left
+                        h4.card-title #{bangumi_info.name_cn}
+                        p.card-text 简介：#{bangumi_info.summary}
+                        p.card-text 评分：#{bangumi_info.rating.score}

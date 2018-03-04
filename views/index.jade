@@ -8,7 +8,7 @@ html
         script(src="/javascripts/bootstrap.min.js")
         script(src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js")
     body
-        nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+        nav.navbar.navbar-expand-md.navbar-dark.bg-primary
             a.navbar-brand(href="#")="NavBar"
             button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbar")
                 span.navbar-toggler-icon
@@ -41,6 +41,16 @@ html
                 div.active.container.tab-pane#mon
                     each item in mydata[0].items
                         div.card
+                            a(href="/info?subject=#{item.id}" target="_blank" title="#{item.name_cn}")
+                                img(alt="#{item.name_cn}" src="#{item.images.small}")
+                            div.r-text
+                                a.t(href="/info?subject=#{item.id}" target="_blank" title="#{item.name_cn}") #{item.name_cn}
+                                p.update.on
+                                    span="更新至"
+                                    a(href="#" target="_blank")="8话"
+                div.container.tab-pane#tus
+                    each item in mydata[1].items
+                        div.card
                             a.pic(href="#" target="_blank" title="#{item.name_cn}")
                                 div.lazy-img
                                     img(alt="#{item.name_cn}" src="#{item.images.small}")
@@ -49,72 +59,61 @@ html
                                 p.update.on
                                     span="更新至"
                                     a(href="#" target="_blank")="8话"
-                div.container.tab-pane#tus
-                    each item in mydata[1].items
-                         div.card
-                            a.pic(href="#" target="_blank" title="#{item.name_cn}")
-                                    div.lazy-img
-                                        img(alt="#{item.name_cn}" src="#{item.images.small}")
-                                div.r-text
-                                    a.t(href="#" target="_blank" title="#{item.name_cn}") #{item.name_cn}
-                                    p.update.on
-                                        span="更新至"
-                                        a(href="#" target="_blank")="8话"
                 div.container.tab-pane#wed
-                        each item in mydata[2].items
-                            div.card
-                                a.pic(href="#" target="_blank" title="#{item.name_cn}")
-                                    div.lazy-img
-                                        img(alt="#{item.name_cn}" src="#{item.images.small}")
-                                div.r-text
-                                    a.t(href="#" target="_blank" title="#{item.name_cn}") #{item.name_cn}
-                                    p.update.on
-                                        span="更新至"
-                                        a(href="#" target="_blank")="8话"
+                    each item in mydata[2].items
+                        div.card
+                            a.pic(href="#" target="_blank" title="#{item.name_cn}")
+                                div.lazy-img
+                                    img(alt="#{item.name_cn}" src="#{item.images.small}")
+                            div.r-text
+                                a.t(href="#" target="_blank" title="#{item.name_cn}") #{item.name_cn}
+                                p.update.on
+                                    span="更新至"
+                                    a(href="#" target="_blank")="8话"
                 div.container.tab-pane#thur
-                        each item in mydata[3].items
-                            div.card
-                                a.pic(href="#" target="_blank" title="#{item.name_cn}")
-                                    div.lazy-img
-                                        img(alt="#{item.name_cn}" src="#{item.images.small}")
-                                div.r-text
-                                    a.t(href="#" target="_blank" title="#{item.name_cn}") #{item.name_cn}
-                                    p.update.on
-                                        span="更新至"
-                                        a(href="#" target="_blank")="8话"
+                    each item in mydata[3].items
+                        div.card
+                            a.pic(href="#" target="_blank" title="#{item.name_cn}")
+                                div.lazy-img
+                                    img(alt="#{item.name_cn}" src="#{item.images.small}")
+                            div.r-text
+                                a.t(href="#" target="_blank" title="#{item.name_cn}") #{item.name_cn}
+                                p.update.on
+                                    span="更新至"
+                                    a(href="#" target="_blank")="8话"
                 div.container.tab-pane#fri
-                        each item in mydata[4].items
-                            div.card
-                                a.pic(href="#" target="_blank" title="#{item.name_cn}")
-                                    div.lazy-img
-                                        img(alt="#{item.name_cn}" src="#{item.images.small}")
-                                div.r-text
-                                    a.t(href="#" target="_blank" title="#{item.name_cn}") #{item.name_cn}
-                                    p.update.on
-                                        span="更新至"
-                                        a(href="#" target="_blank")="8话"
+                    each item in mydata[4].items
+                        div.card
+                            a.pic(href="#" target="_blank" title="#{item.name_cn}")
+                                div.lazy-img
+                                    img(alt="#{item.name_cn}" src="#{item.images.small}")
+                            div.r-text
+                                a.t(href="#" target="_blank" title="#{item.name_cn}") #{item.name_cn}
+                                p.update.on
+                                    span="更新至"
+                                    a(href="#" target="_blank")="8话"
                 div.container.tab-pane#sat
-                        each item in mydata[5].items
-                            div.card
-                                a.pic(href="#" target="_blank" title="#{item.name_cn}")
-                                    div.lazy-img
-                                        img(alt="#{item.name_cn}" src="#{item.images.small}")
-                                div.r-text
-                                    a.t(href="#" target="_blank" title="#{item.name_cn}") #{item.name_cn}
-                                    p.update.on
-                                        span="更新至"
-                                        a(href="#" target="_blank")="8话"
+                    each item in mydata[5].items
+                        div.card
+                            a.pic(href="#" target="_blank" title="#{item.name_cn}")
+                                div.lazy-img
+                                    img(alt="#{item.name_cn}" src="#{item.images.small}")
+                            div.r-text
+                                a.t(href="#" target="_blank" title="#{item.name_cn}") #{item.name_cn}
+                                p.update.on
+                                    span="更新至"
+                                    a(href="#" target="_blank")="8话"
                 div.container.tab-pane#sun
-                        each item in mydata[6].items
-                            div.card
-                                a.pic(href="#" target="_blank" title="#{item.name_cn}")
-                                    div.lazy-img
-                                        img(alt="#{item.name_cn}" src="#{item.images.small}")
-                                div.r-text
-                                    a.t(href="#" target="_blank" title="#{item.name_cn}") #{item.name_cn}
-                                    p.update.on
-                                        span="更新至"
-                                        a(href="#" target="_blank")="8话"
+                    each item in mydata[6].items
+                        div.card
+                            a.pic(href="#" target="_blank" title="#{item.name_cn}")
+                                div.lazy-img
+                                    img(alt="#{item.name_cn}" src="#{item.images.small}")
+                            div.r-text
+                                a.t(href="#" target="_blank" title="#{item.name_cn}") #{item.name_cn}
+                                p.update.on
+                                    span="更新至"
+                                    a(href="#" target="_blank")="8话"
 
 
     //-
