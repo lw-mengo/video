@@ -27,3 +27,7 @@ html
                         h4.card-title #{bangumi_info.name_cn}
                         p.card-text 简介：#{bangumi_info.summary}
                         p.card-text 评分：#{bangumi_info.rating.score}
+                 each item in ep.eps
+                     if item.status!='NA'
+                         div
+                             p #{item.name_cn}
