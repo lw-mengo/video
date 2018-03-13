@@ -21,13 +21,20 @@ html
                         li.nav-item
                             a.nav-link(href="#")="综艺"
             div.container
-                div.card
-                    img.card-img(src="#{bangumi_info.images.common}" alt="#{bangumi_info.name_cn}")
+                div.card(style="flex-direction: initial")
+                    img.card-img(src="#{bangumi_info.images.common}" alt="#{bangumi_info.name_cn}" style="width:150px")
                     div.card-body.float-left
                         h4.card-title #{bangumi_info.name_cn}
                         p.card-text 简介：#{bangumi_info.summary}
                         p.card-text 评分：#{bangumi_info.rating.score}
-                 each item in ep.eps
-                     if item.status!='NA'
-                         div
-                             p #{item.name_cn}
+            div.container(style="margin-top:20px;")
+                div.alert.alert-success
+                    strong 在线观看
+            div.container(style="margin-top:20px;")
+                ul
+                    each item,index in episode.episodeList
+                        li
+                          a(href="/watch?subject=#{aid}&episode=#{index}")
+                            button.btn.btn-info(type="button") #{item.episode}
+                            span  #{ep.eps[index].name_cn}
+

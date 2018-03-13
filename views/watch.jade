@@ -1,0 +1,40 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        link(rel="stylesheet" href="/stylesheets/bootstrap.min.css")
+        link(rel="stylesheet" href="/stylesheets/video-js.min.css")
+        script(src="/javascripts/jquery.min.js")
+        script(src="/javascripts/bootstrap.min.js")
+        script(src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js")
+        script(src="/javascripts/video.min.js")
+        script(src="/javascripts/videojs-contrib-hls.min.js")
+        body
+            nav.navbar.navbar-expand-md.navbar-dark.bg-primary
+                div.container
+                    a.navbar-brand(href="#")="我爱看番"
+                    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbar")
+                        span.navbar-toggler-icon
+                    div.collapse.navbar-collapse#navbar
+                        ul.navbar-nav
+                            li.nav-item
+                                a.nav-link(href="#")="动画"
+                            li.nav-item
+                                a.nav-link(href="#")="电视剧"
+                            li.nav-item
+                                a.nav-link(href="#")="综艺"
+
+            dic.container
+              video#main-player.video-js.vjs-default-skin(width=1280 height=720 controls=)
+
+        script.
+            $(document).ready(function () {
+               var player = videojs("main-player");
+               player.src({
+                   src:"#{url}",
+                   type:"application/x-mpegURL"
+               });
+               player.play();
+            });
+

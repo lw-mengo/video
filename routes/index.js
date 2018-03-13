@@ -62,25 +62,32 @@ router.get("/info", function (req, res) {
         method: "GET",
         json: true
     };
-    var bangumi_info,ep_info;
+    var options_2 = {
+        uri: "http://localhost:8080/subject/" + subject,
+        method: "GET",
+        json: true
+    };
+    var bangumi_info, ep_info, video_info;
     rp(options).then(function (value) {
-        bangumi_info = value;
-        console.log(value);
-        //res.render("bangumi_info",{bangumi_info:value});
-        //return value;
-    }).then(rp(options_1).then(function (value) {
-        ep_info = value;
-        console.log(value);
-        res.render("bangumi_info",{bangumi_info:bangumi_info,ep:ep_info});
+            bangumi_info = value;
+            //res.render("bangumi_info",{bangumi_info:value});
         }
-    )).catch(function (reason) {
+    ).then(rp(options_1).then(function (value) {
+            ep_info = value;
+            res.render("bangumi_info", {bangumi_info: bangumi_info, ep: ep_info, episode: video_info, aid: subject});
+        })
+    ).then(rp(options_2).then(function (value) {
+            video_info = JSON.parse(value.url);
+        })
+    ).catch(function (reason) {
         console.log(reason);
     });
+
+// .then(rp(options_2).then(function (value) {
+//     video_info = JSON.parse(value.url);
+//     console.log("3333");
+//     res.render("bangumi_info", {bangumi_info: bangumi_info, ep: ep_info, episode: video_info});
     /**优化一下代码**/
-
-
-
-
 
 
     //  rp(url).then(function (value) {
@@ -103,6 +110,24 @@ router.get("/info", function (req, res) {
     // });
     //res.render("bangumi_info");
 
+});
+
+router.get("/watch", function (req, res) {
+    var ep = req.query.episode;
+    var subject = req.query.subject;
+    var options = {
+        uri: "http://localhost:8080/subject/" + subject,
+        method: "GET",
+        json: true
+    };
+    rp(options).then(function (value) {
+        var link = JSON.parse(value.url);
+        var url = link.episodeList[ep].videoLink;
+        res.render("watch", {url: url});
+    }).catch(function (reason) {
+        console.log(reason);
+    });
+    // res.render("watch");
 });
 
 module.exports = router;
