@@ -34,8 +34,8 @@ html
                 ul
                     each item,index in episode.episodeList
                         li
-                          a(href="/watch?subject=#{aid}&episode=#{index}")
-                            button.btn.btn-info(type="button") #{item.episode}
-                            span  #{ep.eps[index].name_cn}
+                            a(href="/new_watch?subject=#{aid}&episode=#{index}")
+                                button.btn.btn-info(type="button") #{item.episode}
+                                span  #{ep.eps[index].name_cn}
 
         include foot

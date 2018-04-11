@@ -1,0 +1,20 @@
+.card{
+    height: 110px;
+    width: 220px;
+    float: left;
+    flex-direction: inherit;
+    margin-right: 25px;
+    margin-bottom: 13px;
+}
+.card img{
+    height: 100%;
+    width: 90px;
+}
+.r-text{
+    margin-left: 10px;
+    margin-top: 2px;
+    float: left;
+}
+.r-text a{
+    font-size: 1em;
+}

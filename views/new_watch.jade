@@ -26,15 +26,15 @@ html
                                 a.nav-link(href="#")="综艺"
 
             dic.container
-              video#main-player.video-js.vjs-default-skin(width=1280 height=720 controls=)
+                video#main-player.video-js.vjs-default-skin(width=1280 height=720 controls=)
 
         script.
             $(document).ready(function () {
-               var player = videojs("main-player");
-               player.src({
-                   src:"#{url}",
-                   type:"application/x-mpegURL"
-               });
-               player.play();
+                var player = videojs("main-player");
+                player.src({
+                    src:"#{url}",
+                    type:"application/x-mpegURL"
+                });
+                player.play();
             });
-        include foot.jade
+
